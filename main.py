@@ -3,16 +3,6 @@ from threading import Thread
 import time
 
 
-def auto_click():
-	while True:
-		pyautogui.click(button="left")
-		time.sleep(0.01)
-		pyautogui.click(button="left")
-		global stop_threads
-		if stop_threads:
-			break
-        	
-
 
 def join():
 	print("Start Join")
