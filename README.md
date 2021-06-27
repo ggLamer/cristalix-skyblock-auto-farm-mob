@@ -1,13 +1,17 @@
-# cristalix-skyblock-auto-rejoin
+Привет, это бот для авто фарма подарочков на сервер skyblock Mys на Cristalix.
 
-#English
+Для его работы на понадобиться [python3](https://www.python.org/) любой версии  
+и библиотека [pyautogui](https://pypi.org/project/PyAutoGUI/)
 
-auto rejoin after restart
+После установки библиотки зайдите в хаб киристаликса  
+и запустите main.py от имени администратора 
 
-libraries 
-pip install pyautogui
+В Windows для этого нужно создать файл run.bat   
+и внутри прописать путь до файла  
+Пример:  
+cd C:\Users\Name\Desktop\autofarm\ #переходим в папку с файлами  
+python main.py #запускаем скрипт  
+PAUSE #останавливаем после завершеня  
 
-
-#Russian
-
-авто перезаход после рестарта 
+Теперь запускаете run.bat от имени админстратора  
+И радуетесь жизни
