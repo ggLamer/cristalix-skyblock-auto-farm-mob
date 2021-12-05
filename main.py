@@ -15,49 +15,61 @@ def join():
 
 	pyautogui.click(button="right")
 
-	time.sleep(0.3)
+	time.sleep(1.3)
 
-	print("skyblock")
 	try:
-		skyblock_x, skyblock_y = pyautogui.locateCenterOnScreen("skyblock1.png")
-		print(skyblock_x, skyblock_y)
-		pyautogui.moveTo(skyblock_x, skyblock_y)
-		pyautogui.click()
+		try:
+			print("skyblock1 icon")
+			skyblock_x, skyblock_y = pyautogui.locateCenterOnScreen("skyblock1.png")
+			print(skyblock_x, skyblock_y)
+			pyautogui.moveTo(skyblock_x, skyblock_y)
+			pyautogui.click()
+		except:
+			print("skyblock icon")
+			skyblock_x, skyblock_y = pyautogui.locateCenterOnScreen("skyblock.png")
+			print(skyblock_x, skyblock_y)
+			pyautogui.moveTo(skyblock_x, skyblock_y)
+			pyautogui.click()
 	except:
-		print("except")
-		skyblock_x, skyblock_y = pyautogui.locateCenterOnScreen("skyblock.png")
-		print(skyblock_x, skyblock_y)
-		pyautogui.moveTo(skyblock_x, skyblock_y)
-		pyautogui.click()
+		print("skyblock icon no viseble")
+		press("esc")
+		print("return\n")
+		return 
 	time.sleep(0.3)
+	try:
+		try:
+			print("Slot 1")
+			skyb_x, skyb_y = pyautogui.locateCenterOnScreen("1slot.png")
+			print(skyb_x, skyb_y)
+			pyautogui.moveTo(skyb_x + 25, skyb_y + 25)
+			pyautogui.click()
+		except:
+			print("Slot 2")
+			skyb_x, skyb_y = pyautogui.locateCenterOnScreen("2slot.png")
+			print(skyb_x, skyb_y)
+			pyautogui.moveTo(skyb_x , skyb_y + 25)
+			pyautogui.click()
+	except:
+		print("No viseble skyblock server")
+		press("esc")
+		print("return\n")
+		return
+	time.sleep(5)
 
-	print("zeldrix")
-	skyb_x, skyb_y = pyautogui.locateCenterOnScreen("zeldrix.png")
-	print(skyb_x, skyb_y)
-	pyautogui.moveTo(skyb_x , skyb_y + 25)
-	pyautogui.click()
-	time.sleep(10)
-def restart():
-	x=0
-	print("Starting restart")
+def main():
 	while True:
 		cris = pyautogui.locateCenterOnScreen("picaxe.png")
 		if not cris:
 			pyautogui.mouseUp(button=pyautogui.LEFT)
 			print("Join")
-			time.sleep(10)
+			time.sleep(5)
 			join()
 		else:
-			x+=1
-			print("Auto click")
+			print("DOWN LEFT")
+			press("1")
 			pyautogui.mouseDown(button=pyautogui.LEFT)
-			press(str(x))
-			print(x)
-			if x == 9:
-				x =0
-				# print(x)
 
 if __name__ == '__main__':
 	print("Start...")
-	time.sleep(7)
-	restart()
+	time.sleep(5)
+	main()
