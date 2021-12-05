@@ -18,11 +18,17 @@ def join():
 	time.sleep(0.3)
 
 	print("skyblock")
-	skyblock_x, skyblock_y = pyautogui.locateCenterOnScreen("skyblock.png")
-	print(skyblock_x, skyblock_y)
-	pyautogui.moveTo(skyblock_x, skyblock_y)
-	pyautogui.click()
-
+	try:
+		skyblock_x, skyblock_y = pyautogui.locateCenterOnScreen("skyblock1.png")
+		print(skyblock_x, skyblock_y)
+		pyautogui.moveTo(skyblock_x, skyblock_y)
+		pyautogui.click()
+	except:
+		print("except")
+		skyblock_x, skyblock_y = pyautogui.locateCenterOnScreen("skyblock.png")
+		print(skyblock_x, skyblock_y)
+		pyautogui.moveTo(skyblock_x, skyblock_y)
+		pyautogui.click()
 	time.sleep(0.3)
 
 	print("zeldrix")
