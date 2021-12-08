@@ -58,18 +58,21 @@ def join():
 
 def main():
 	while True:
+		
 		cris = pyautogui.locateCenterOnScreen("picaxe.png")
 		if not cris:
 			pyautogui.mouseUp(button=pyautogui.LEFT)
 			print("Join")
-			time.sleep(5)
 			join()
+			
 		else:
 			print("DOWN LEFT")
 			press("1")
 			pyautogui.mouseDown(button=pyautogui.LEFT)
+		
+			
 
 if __name__ == '__main__':
-	print("Start...")
+	print("Starting... AFK Mineing")
 	time.sleep(5)
 	main()
