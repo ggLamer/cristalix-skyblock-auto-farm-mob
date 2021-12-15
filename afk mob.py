@@ -35,7 +35,7 @@ def join():
 		press("esc")
 		print("return\n")
 		return 
-	time.sleep(0.3)
+	time.sleep(1)
 	try:
 		try:
 			print("Slot 1")
