@@ -41,7 +41,7 @@ def join():
 			print("Slot 1")
 			skyb_x, skyb_y = pyautogui.locateCenterOnScreen("2slot.png")
 			print(skyb_x, skyb_y)
-			pyautogui.moveTo(skyb_x + 25, skyb_y + 25)
+			pyautogui.moveTo(skyb_x, skyb_y + 25)
 			pyautogui.click()
 		except:
 			print("Slot 2")
